@@ -1,5 +1,6 @@
 package base;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,9 +24,9 @@ public class CommonAPI {
     @Parameters({"url"})
     @BeforeMethod
     public void launchBrowser(String url){
-        System.setProperty("webdriver.chrome.driver", "/Users/matiur/develop/aint/SeleniumAprill2022/SeleniumProject1/src/driver/chromedriver");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.navigate().to(url);
     }
 
@@ -35,6 +36,12 @@ public class CommonAPI {
     }
 
     //Selenium API
+    public static void navigateBack(){
+        driver.navigate().back();
+    }
+    public static void navigateRefresh(){
+        driver.navigate().refresh();
+    }
     public static void typeOnWebElement(String locator, String value){
         try{
             driver.findElement(By.id(locator)).sendKeys(value);

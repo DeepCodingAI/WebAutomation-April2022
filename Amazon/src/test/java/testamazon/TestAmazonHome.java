@@ -1,14 +1,14 @@
 package testamazon;
 
 import base.CommonAPI;
-import datasource.SearchItems;
+import datasupply.SearchItems;
 import dropdownmenu.SearchDropDownMenu;
 import org.testng.annotations.Test;
 
 public class TestAmazonHome extends CommonAPI {
 
     @Test
-    public void testHomePage(){
+    public void testHomePage() throws Exception {
         SearchItems.searchItems();
     }
 
