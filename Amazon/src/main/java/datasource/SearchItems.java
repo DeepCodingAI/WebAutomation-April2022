@@ -1,12 +1,10 @@
-package datasupply;
+package datasource;
 
 import base.CommonAPI;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import static base.CommonAPI.clearInputBox;
-import static base.CommonAPI.typeOnWebElement;
 
 public class SearchItems {
 

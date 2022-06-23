@@ -5,12 +5,14 @@ import org.openqa.selenium.support.PageFactory;
 import org.testng.annotations.Test;
 import pages.AllKindsOfNewsPage;
 
+import java.io.IOException;
+
 
 public class TestAllFunctionality extends CommonAPI {
 
     @Test
-    public void testNewsFunctionality(){
+    public void testNewsFunctionality() throws IOException, InterruptedException {
         AllKindsOfNewsPage allFunctionalityPage = PageFactory.initElements(driver, AllKindsOfNewsPage.class);
-        allFunctionalityPage.sectionMenu(driver);
+        allFunctionalityPage.runAllTheFeatureTest(driver);
     }
 }

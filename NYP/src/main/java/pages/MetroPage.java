@@ -18,10 +18,9 @@ public class MetroPage {
     @FindBy(how = How.CSS, using = ".story__headline.headline.headline--xl")
     public static WebElement headLineNewsWebElement;
 
-    public String getHeadLineNews(){
+    public String getHeadLineNewsText(){
         String headLine = headLineNewsWebElement.getText();
         System.out.println(headLine);
-
         return headLine;
     }
 }

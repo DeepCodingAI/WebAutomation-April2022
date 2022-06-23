@@ -1,7 +1,7 @@
 package testamazon;
 
 import base.CommonAPI;
-import datasupply.SearchItems;
+import datasource.SearchItems;
 import dropdownmenu.SearchDropDownMenu;
 import org.testng.annotations.Test;
 

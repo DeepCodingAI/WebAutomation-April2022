@@ -1,4 +1,4 @@
-package datasupply;
+package datasource;
 
 import java.io.FileInputStream;
 import java.io.IOException;
