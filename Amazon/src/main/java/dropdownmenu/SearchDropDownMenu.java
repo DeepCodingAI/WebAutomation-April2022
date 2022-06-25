@@ -6,14 +6,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 import java.util.List;
 
-public class SearchDropDownMenu {
+public class SearchDropDownMenu extends CommonAPI {
 
-    public static void fetchDropDownMenuItems(){
+    CommonAPI commonAPI = new CommonAPI();
+    public void fetchDropDownMenuItems(){
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         List<String> text = CommonAPI.getListOfText(".nav-search-dropdown.searchSelect.nav-progressive-attrubute option");
-        CommonAPI.printText(text);
+        commonAPI.printText(text);
         //fetch api to extract drop down menu text
         Assert.assertEquals(text,text);
     }

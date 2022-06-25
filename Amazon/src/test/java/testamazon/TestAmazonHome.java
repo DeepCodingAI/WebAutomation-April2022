@@ -4,22 +4,22 @@ import base.CommonAPI;
 import datasource.SearchItems;
 import dropdownmenu.SearchDropDownMenu;
 import org.testng.annotations.Test;
+import reporting.TestLogger;
 
 public class TestAmazonHome extends CommonAPI {
 
+    SearchDropDownMenu searchDropDownMenu = new SearchDropDownMenu();
+    SearchItems searchItems = new SearchItems();
+
     @Test
     public void testHomePage() throws Exception {
-        SearchItems.searchItems();
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchItems.searchItems();
     }
 
-    //@Test
-    public void testHomePageTitle(){
-        String title = driver.getTitle();
-        System.out.println(title);
-    }
-
-    //@Test
+    @Test
     public void fetchDropDownMenuText(){
-        SearchDropDownMenu.fetchDropDownMenuItems();
+        TestLogger.log(getClass().getSimpleName() + ": " + convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
+        searchDropDownMenu.fetchDropDownMenuItems();
     }
 }

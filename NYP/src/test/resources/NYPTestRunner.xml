@@ -4,6 +4,11 @@
 <suite name ="Unit Test Automation Script" parallel="false">
     <test name = "NYP Home">
         <parameter name="useCloudEnv" value="false"/>
+        <parameter name="envName" value="browserstack"/>
+        <parameter name="os" value="OS X"/>
+        <parameter name="os_version" value="Sierra"/>
+        <parameter name="browserName" value="chrome"/>
+        <parameter name="browserVersion" value="90.0"/>
         <parameter name="url" value="https://nypost.com/"/>
         <classes>
             <class name="testnyp.TestAllFunctionality"/>

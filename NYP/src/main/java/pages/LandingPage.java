@@ -1,8 +1,10 @@
 package pages;
 
+import base.CommonAPI;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import reporting.TestLogger;
 
 public class LandingPage {
 
@@ -19,18 +21,22 @@ public class LandingPage {
     public static WebElement logInSubmitWebElement;
 
     public void clickOnSectionNavBar(){
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         sectionNavBarWebElement.click();
     }
 
     public void clickOnSearch(){
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         searchWebElement.click();
     }
 
     public void clickOnLogIn(){
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         logInWebElement.click();
     }
 
     public void clickOnLogInSubmit(){
+        TestLogger.log(getClass().getSimpleName() + ": " + CommonAPI.convertToString(new Object(){}.getClass().getEnclosingMethod().getName()));
         logInSubmitWebElement.click();
     }
 
